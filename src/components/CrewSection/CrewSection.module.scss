@@ -1,0 +1,76 @@
+@import "styles/breakpoints.scss";
+
+.ourCrewSection {
+  height: auto;
+  background-color: #f1f1f1;
+}
+
+.ourCrewSectionContent {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+
+  @include media(">=desktop") {
+    width: 960px;
+    align-items: start;
+  }
+}
+
+.crewSectionSlogan {
+  font-size: 36px;
+  font-weight: 700;
+  color: #152d41;
+}
+
+.ourCrewList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.ourCrewListElement {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  gap: 50px;
+
+  @include media(">=desktop") {
+    flex-direction: row;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      text-align: end;
+    }
+  }
+}
+
+.ourCrewImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.listElement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.crewName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.crewDescription {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}

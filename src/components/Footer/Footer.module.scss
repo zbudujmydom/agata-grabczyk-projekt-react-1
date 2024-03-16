@@ -1,0 +1,43 @@
+@import "styles/breakpoints.scss";
+
+.footer {
+  height: 150px;
+  background-color: #4e4e4e;
+
+  @include media(">=tablet") {
+    height: 70px;
+  }
+
+  .footerContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    @include media(">=tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.rodo {
+  font-size: 16px;
+  font-weight: 400;
+
+  @include media(">=tablet") {
+    font-size: 18px;
+  }
+}
+
+.footerIcons {
+  display: flex;
+  gap: 20px;
+}
+.icon {
+  color: #fafafa;
+  font-size: 2em;
+}

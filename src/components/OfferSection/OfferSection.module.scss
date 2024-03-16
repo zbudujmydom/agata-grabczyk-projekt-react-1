@@ -1,0 +1,108 @@
+@import "styles/breakpoints.scss";
+
+.offerSection {
+  height: auto;
+  background-color: #405d78;
+}
+
+.offerSectionContent {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.offerSectionSlogan {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+
+  @include media(">=tablet") {
+    font-size: 36px;
+    padding-top: 0px;
+  }
+
+  @include media(">=desktop") {
+    align-self: start;
+  }
+}
+
+.offerTiles {
+  width: fit-content;
+  padding: 65px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 60px;
+
+  @include media(">=tablet") {
+    grid-template-columns: auto auto;
+  }
+
+  @include media(">=desktop") {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.offerTile {
+  width: 250px;
+  height: 270px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 3px;
+
+  background-color: #f1f1f1;
+
+  @include media(">=tablet") {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  @include media(">=desktop") {
+    cursor: pointer;
+    transition: transform 0.5s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.tileText {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.tileDescription {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.new {
+  position: relative;
+}
+
+.orangePoint {
+  width: 28px;
+  height: 28px;
+  background-color: #e07a64;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -14px;
+  left: -14px;
+
+  @include media(">=desktop") {
+    width: 20px;
+    height: 20px;
+
+    top: -10px;
+    left: -10px;
+  }
+}

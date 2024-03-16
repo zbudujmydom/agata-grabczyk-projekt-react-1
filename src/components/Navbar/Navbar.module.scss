@@ -1,0 +1,92 @@
+@import "styles/breakpoints.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.navContainer {
+  height: 50px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--navfoot-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu {
+  height: 100%;
+
+  padding: 50px 10px;
+
+  background-color: var(--navfoot-color);
+
+  position: fixed;
+  top: 40px;
+  right: -100%;
+  z-index: 2;
+
+  @include media(">=tablet") {
+    right: 0;
+    position: initial;
+    top: 0px;
+    z-index: 0;
+  }
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+  a {
+    padding: 20px 40px;
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+
+    @include media(">=tablet") {
+    }
+    padding: 0px;
+  }
+
+  @include media(">=tablet") {
+    flex-direction: row;
+    gap: 46px;
+    justify-content: flex-end;
+  }
+}
+
+.allowedCto {
+  @include media(">=desktop") {
+    cursor: pointer;
+  }
+}
+
+.notAllowedCto {
+  @include media(">=desktop") {
+    cursor: not-allowed;
+  }
+}
+
+.showMenu {
+  right: 0;
+}
+
+.navButton {
+  @include media(">=tablet") {
+    display: none;
+  }
+  svg {
+    width: 20px;
+    height: 30px;
+  }
+}
