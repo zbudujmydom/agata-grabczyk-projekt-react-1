@@ -31,7 +31,10 @@ const Navbar = () => {
             {navOptions.map((option) => (
               <li key={nanoid()}>
                 {option.isScroll && (
-                  <a className={styles.allowedCto} href={option.path}>
+                  <a
+                    className={styles.allowedCto}
+                    href={option.path}
+                    onClick={() => setShowMenu(false)}>
                     {option.name}
                   </a>
                 )}

@@ -22,36 +22,38 @@
 }
 
 .menu {
-  height: 100%;
+  height: calc(100vh - 50px);
+  width: 100%;
 
-  padding: 50px 10px;
+  padding: 10px 10px;
 
   background-color: var(--navfoot-color);
 
   position: fixed;
-  top: 40px;
+  top: 50px;
   right: -100%;
   z-index: 2;
 
   @include media(">=tablet") {
+    width: auto;
     right: 0;
     position: initial;
     top: 0px;
     z-index: 0;
+    height: 100%;
   }
 }
 
 .navLinks {
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 50px;
   a {
     padding: 20px 40px;
+    color: white;
     text-decoration: none;
-    &:visited {
-      color: inherit;
-    }
 
     @include media(">=tablet") {
     }

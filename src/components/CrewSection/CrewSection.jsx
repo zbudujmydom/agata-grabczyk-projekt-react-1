@@ -2,7 +2,6 @@ import clsx from "clsx";
 import styles from "./CrewSection.module.scss";
 import specialistManImage from "assets/specialist-man.jpg";
 import specialistGirlImage from "assets/specialist-girl.jpg";
-// import globalStyles from "styles/globals.scss";
 
 const CrewSection = () => {
   return (
